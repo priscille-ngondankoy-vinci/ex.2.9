@@ -1,5 +1,5 @@
 import { useState,  type SyntheticEvent } from "react";
-
+import { Box, TextFlied, Button } from "@mui/material";
 
 type Movie = {
     id: number,
@@ -68,7 +68,7 @@ const AddMovie = ({ addMovie }: AddMovieProps) => {
   };
 
   return (
-    <div>
+    <Box>
       <form onSubmit={handleSubmit}>
         <label htmlFor="movie">Movie</label>
         <input
@@ -116,7 +116,7 @@ const AddMovie = ({ addMovie }: AddMovieProps) => {
           
         />
 
-        <label htmlFor="description">Description</label>
+        <TextField htmlFor="description">Description</TextField>
         <input
           value={description}
           type="text"
@@ -125,9 +125,9 @@ const AddMovie = ({ addMovie }: AddMovieProps) => {
           onChange={handleDescriptionChange}
           
         />
-        <button type="submit">Ajouter</button>
+        <Button type="submit">Ajouter</Button>
       </form>
-    </div>
+    </Box>
   );
 };
 

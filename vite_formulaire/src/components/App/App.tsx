@@ -8,8 +8,7 @@ function App() {
   return (
     <Box>
       <Main />
-      </Box>
-    
+    </Box>
   );
 }
 
